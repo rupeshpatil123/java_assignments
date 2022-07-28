@@ -1,0 +1,133 @@
+<html lang="en" xlmns:th="https://www.thymeleaf.org/">
+
+<head>
+	<title>Product List</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+
+</head>
+<style>
+.container{
+	width:fit-content;
+	
+}
+
+</style>
+
+<body>
+	&nbsp
+	<h2>Product Form</h2>
+	
+	<div class="container bg-dark text-white ">
+	<form class="form" action="#" th:action="@{/product/save}" th:object="${PRODUCT}" method="POST">
+	<p th:if="*{id} == null">Add Product Details</p>
+	<p th:if="*{id} != null">Update Product Details</p>
+		<div class="row">
+			<input type="hidden" name="id" th:field="*{id}" value="0">
+		</div>
+		<div class="row align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">product Name</label>
+			</div>
+			<div class="col-auto">
+				<input type="text" name="proname" th:field="*{proname}"/>
+			</div>
+		</div>
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">product description</label>
+			</div>
+			<div class="col-auto">
+				<input type="text" name="description" th:field="*{description}"/>
+			</div>
+		</div>
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">unite price</label>
+			</div>
+			<div class="col-auto">
+				<input type="number" name="unitprice" th:field="*{unitprice}"/>
+			</div>
+		</div>
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">image url</label>
+			</div>
+			<div class="col-auto">
+				<input type="text" name="imageurl" th:field="*{imageurl}"/>
+			</div>
+		</div>
+		
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">Units in Stock</label>
+			</div>
+			<div class="col-auto">
+				<input type="number" name="unitsinstock" th:field="*{unitsinstock}"/>
+			</div>
+		</div>
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">Date created </label>
+			</div>
+			<div class="col-auto">
+				<input type="date" name="datecreated" th:field="*{datecreated}"/>
+			</div>
+		</div>
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">Last Updated:</label>
+			</div>
+			<div class="col-auto">
+				<input type="date" name="lastupdated" th:field="*{lastupdated}"/>
+			</div>
+		</div>
+		
+		
+		<div class="row  align-items-center">
+			<div class="col-sm-3">
+				<label class="col-form-label">Category ID</label>
+			</div>
+			<div class="col-auto">
+				<input type="number" name="categoryid" th:field="*{categoryid}"/>
+			</div>
+		</div>
+		
+		
+		<div class="row g-3 align-items-center">
+			<div class="col-auto">
+				<button type="submit" class="btn btn-success">Submit</button>
+			</div>
+			<div class="col-auto">
+				<button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+			</div>
+		</div>
+		
+	</form>
+	<div><a th:href="@{/product/prodlist}">Back to Employee List</a>
+
+	</div>
+		
+		
+		
+
+	</div>
+
+</body>
+
+
+
+</html>
