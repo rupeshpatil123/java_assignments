@@ -1,0 +1,66 @@
+<p>sales-person-list works!</p>
+<!-- {{name}}
+
+<P>Sales person List</P>
+Firstname:{{s1.firstName}}
+LastName:{{s1.lastName}}
+Email:{{s1.email}}
+Salary:{{s1.salary}}
+SalesVolume:{{s1.salesVolume}} -->
+<div class="container">
+<table class="table  table-bordered table-stripped">
+    <tr class="table-borderd" >
+        <th>FirstName</th>
+        <th>lastName</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>SalesVolume</th>
+
+    </tr>
+    <tr  *ngFor="let person of salesPersonList" [ngClass] = "{'metQuote' : person.salary >= 20000,
+        'nonMetQuote' : person.salary < 20000}">
+        <td>{{person.firstName}}</td>
+        <td>{{person.lastName}}</td>
+        <td>{{person.email}}</td>
+        <td>{{person.salary}}</td>
+        <td>{{person.salesVolume}}</td>
+
+        <td>
+            <div *ngIf = "person.salary>20000; else elseBlock">YES</div>
+            <ng-template #elseBlock>NO</ng-template>
+        </td>
+        
+
+    </tr>
+</table>
+
+<form #salesperson="ngForm"(ngSubmit)="onSubmit()" >
+    <div class="row">
+    <div class="col-sm-3"><label for="">Firstname</label></div>
+    <div class="col-sm-6"><input type="text"name="firstName"[(ngModel)] =formModel.firstName ></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">LastName</label></div>
+    <div class="col-sm-6"><input type="text"name="lastName"[(ngModel)] = formModel.lastName></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">email</label></div>
+    <div class="col-sm-6"><input type="text"name="email"[(ngModel)] = formModel.email></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">salary</label></div>
+    <div class="col-sm-6"><input type="text"name="salary"[(ngModel)] = formModel.salary></div>
+</div>
+&nbsp;
+<div class="row">
+    <div class="col-sm-3"><label for="">SalesVolume</label></div>
+    <div class="col-sm-6"><input type="text"name="salesVolume" [(ngModel)] = formModel.salesVolume></div>
+</div>
+<div class="row">
+    <div class="col-sm-3"><button type="submit">submit</button></div>
+</div>
+</form>
+</div>

@@ -1,0 +1,10 @@
+.container{
+    font-size: small;
+   
+}
+.metQuote {
+    background-color: red;
+}
+.nonMetQuote {
+    background-color: green;
+}
