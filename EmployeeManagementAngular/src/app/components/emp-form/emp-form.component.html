@@ -1,0 +1,46 @@
+ <div class="container">
+
+    <!-- /* commission: null
+empno: 1000
+ename: "Yash"
+hiredate: "1991-11-18"
+job: "President"
+managerID: null
+salary: 80000*/ -->
+  <form #employee="ngForm"(ngSubmit)="onSubmit()">
+        <div class="row">
+        <div class="col-sm-3"><label for="">Emp No</label></div>
+        <div class="col-sm-6"><input type="number"name="empno"[(ngModel)] =formModel.empno ></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label for="">Employee name</label></div>
+        <div class="col-sm-6"><input type="text"name="ename"[(ngModel)] = formModel.ename></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label for="">Hiredate</label></div>
+        <div class="col-sm-6"><input type="date"name="hiredate"[(ngModel)] = formModel.hiredate></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label for="">Job</label></div>
+        <div class="col-sm-6"><input type="text"name="job"[(ngModel)] = formModel.job></div>
+    </div>
+    &nbsp;
+    <div class="row">
+        <div class="col-sm-3"><label for="">managerID</label></div>
+        <div class="col-sm-6"><input type="number"name="managerID" [(ngModel)] = formModel.managerID></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"><label for="">Salary</label></div>
+        <div class="col-sm-6"><input type="number"name="salary" [(ngModel)] = formModel.salary></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"><button type="submit">submit</button></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"><a routerLink="" class="btn btn-primary">back to Home</a></div>
+    </div>
+    </form> 
+ </div>
