@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 5%;">
+    <a  type="button" routerLink="/categoryform" class="btn btn-dark">Add Category</a>
+
+    &nbsp;
+    &nbsp;
+    <a routerLink="" type="button" class="btn btn-dark">Home</a>
+    <br>
+    &nbsp;
+    <h4>Category List</h4>
+    &nbsp;
+    <table class="table  table-bordered table-stripped ">
+        <tr>
+            <th>Category Id</th>
+            <th> Category Name</th>
+            
+            
+        </tr>
+
+        <tr *ngFor="let cat of categories"  >
+            <td>{{cat.categoryid}}</td>
+            <td>{{cat.categoryname}}</td>
+            
+           
+
+
+        </tr>
+    </table>
