@@ -12,8 +12,8 @@ import com.project.news.entity.Likes;
 @RepositoryRestResource(path="likes")
 @CrossOrigin("http://localhost:4200/")
 public interface LikesRepository extends JpaRepository<Likes, Integer>{
-	
-	@Query("select l.newsid, count(l.newsid)from Likes as l group by l.newsid order by l.newsid ")
-	public List<Object[]> countLikes();
+//	
+//	@Query("select l.newsid, count(l.newsid)from Likes as l group by l.newsid order by l.newsid ")
+//	public List<Likes[]> countLikes();
 
 }
