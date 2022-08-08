@@ -1,0 +1,66 @@
+ 
+<div class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="color: white;" >PSR News</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white;" aria-current="page" routerLink="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" routerLink="/sports">Sports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white;" routerLink="/business" >Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  style="color: white;"routerLink="/entertainment">Entertainment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  style="color: white;" routerLink="/international"  >International</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color: white;"  id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Category
+                            </a>
+                            <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                               <li>{{cat.categoryname}}</li> 
+
+                            </ul>
+                        </li> -->
+                       
+                    </ul>
+                    <form  class="d-flex">
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <ul class="navbar-nav flex-grow-2">
+                    <li *ngIf="!loginStatus">
+                        <button  class="btn btn-info" routerLink="/signup" type="submit">Sign up</button>
+                        
+                    </li>
+                    &nbsp;
+                        &nbsp;
+                    <li *ngIf="!loginStatus">
+                        <button  class="btn  btn-info " routerLink="/login" type="submit">Login</button>
+                    </li>
+                        &nbsp;
+                    <li *ngIf="loginStatus">
+                        <button (click)="onLogout()" class="btn  btn-danger " routerLink="" type="submit">Logout</button>
+                    </li>
+                    </ul>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+    </div>
+</div>
+    

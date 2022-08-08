@@ -1,0 +1,28 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="container" style="margin-top: 50px;">
+   
+   
+
+    
+  
+    <h4>Like count</h4>
+    <table class="table  table-bordered table-stripped ">
+        <tr class="table-primary">
+            
+            <th>News ID</th>
+            <th>Likes Count</th>
+          
+         
+        </tr>
+
+        <tr *ngFor="let n of likeCount" >
+           
+            <td>{{n[0]}}</td>
+            <td>{{n[1]}}</td>
+          
+            
+          
+        </tr>
+    </table>
+</div>

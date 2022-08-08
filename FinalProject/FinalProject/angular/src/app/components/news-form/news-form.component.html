@@ -1,0 +1,57 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+    <br>
+    <div class="row">
+        <h4>Add news</h4>
+    </div>
+    
+    <form #pf="ngForm"(ngSubmit)="onSubmit()">
+    
+        <div class="row">
+            <div class="col-sm-3"><label for="">Author </label></div>
+            <div class="col-sm-6"><input type="text" name="author" [(ngModel)] = "news.author"></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">News title</label></div>
+            <div class="col-sm-6"><input type="text" name="title" [(ngModel)] = "news.title"></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">News URL</label></div>
+            <div class="col-sm-6"><input type="text" name="newsurl" [(ngModel)] = "news.newsurl"></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">Image URL</label></div>
+            <div class="col-sm-6"><input type="text" name="imageurl" [(ngModel)] = "news.imageurl" ></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">Content</label></div>
+            <div class="col-sm-6"><input type="text" name="content" [(ngModel)] = "news.content"></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">Description</label></div>
+            <div class="col-sm-6"><input type="text" name="description" [(ngModel)] = "news.description"></div>
+        </div>
+        &nbsp;
+        <div class="row">
+            <div class="col-sm-3"><label for="">Category Id</label></div>
+            <div class="col-sm-6">
+                <select name="category" [(ngModel)] = "news.categoryid">
+                        
+                    <option *ngFor="let cat of category" value="{{cat.categoryid}}">{{cat.categoryname}}</option>
+                </select>
+    
+            </div>
+        </div>
+        &nbsp;
+       
+       
+
+        <div class="row">
+            <div class="col-sm-3"><button type="submit">submit</button></div>
+        </div>
+    </form>

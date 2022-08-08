@@ -1,0 +1,37 @@
+<app-home-navbar></app-home-navbar>
+<div class="container">
+    
+    <div class="row">
+
+    <div id= "news" class="col-3 m-2" *ngFor="let n of internationalsnews"> <div class="card"  style="width: 18rem;">
+         <img src="{{n.imageurl}}" class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">{{n.title}}</h5>
+           <p class="card-text">{{n.content}}</p>
+           <a href="{{n.newsurl}}" target="_blank" class="btn btn-primary">read more</a>
+
+           <div class="row">
+
+             <div class="bg-white">
+                 <div class="d-flex flex-row fs-12">
+                     <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1">Like</span></div>
+                     <div class="like p-2 cursor"><i class="fa fa-commenting-o"></i><span class="ml-1">Comment</span></div>
+                  
+                 </div>
+             </div>
+             <div class="bg-light p-2">
+                 
+             </div>
+     
+         </div>
+     
+
+         </div>
+       </div>
+     </div>
+    
+   
+ </div>
+</div>
+
+ 

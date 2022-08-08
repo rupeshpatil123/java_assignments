@@ -1,0 +1,12 @@
+#news{
+    height: auto;
+    width: fit-content;
+}
+/* .card{
+    height: 550px;
+} */
+
+img{
+    height: 150px;
+    width: auto;
+}

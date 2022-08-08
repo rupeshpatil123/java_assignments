@@ -1,0 +1,31 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="container" style="margin-top: 50px;">
+   
+   
+
+    
+  
+    <h4>Comments List</h4>
+    <table class="table  table-bordered table-stripped ">
+        <tr class="table-primary">
+            <th>Comments ID</th>
+            <th>Comment</th>
+            <th>News ID</th>
+            <th>User ID</th>
+          
+            <th>Action</th>
+        </tr>
+
+        <tr *ngFor="let n of comments" >
+            <td>{{n.commentid}}</td>
+            <td>{{n.comments}}</td>
+            <td>{{n.newsid}}</td>
+            <td>{{n.userid}}</td>
+            <td><button class="btn btn-info" type="submit" (click)="DeleteComment(n.commentid)">Delete</button>
+                &nbsp;</td>
+            
+          
+        </tr>
+    </table>
+</div>
